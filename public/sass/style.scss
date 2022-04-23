@@ -1,6 +1,15 @@
 body {
-  .container {
+  font-family: "Roboto", sans-serif;
+  background-color: pink;
+  .general-container {
     width: 100vw;
+    ul {
+      li {
+        h3 {
+          text-transform: capitalize;
+        }
+      }
+    }
     header {
       width: 100%;
       align-items: center;
