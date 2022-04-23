@@ -8,6 +8,7 @@ class AppComponent extends Component {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 const container = new AppComponent(document.querySelector("body"));
 
 export default AppComponent;
