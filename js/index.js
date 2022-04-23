@@ -1,19 +1,9 @@
-import AppComponent from "./classes/AppComponent.js";
-
-// import pokemons from "./api/pokeApi.js";
-
 const mainApiUrl = "https://pokeapi.co/api/v2/";
-
-/*
-const importFromPokeApi = async (
-  sectionToBeImported,
-  propertyToBeExtracted
-) => {
-  const response = await fetch(`${mainApiUrl}${sectionToBeImported}`);
+const importFromUrl = async (url) => {
+  const response = await fetch(url);
   const dataToBeArranged = await response.json();
-  return dataToBeArranged[propertyToBeExtracted];
+  return dataToBeArranged;
 };
-*/
 
 const importPropertyFromPokeApi = async (
   sectionToBeImported,
@@ -24,17 +14,16 @@ const importPropertyFromPokeApi = async (
   return dataToBeArranged[propertyToBeImported];
 };
 
-const importFromPokeApi = async (sectionToBeImported) => {
-  const response = await fetch(`${mainApiUrl}${sectionToBeImported}`);
-  const dataToBeArranged = await response.json();
-  return dataToBeArranged;
-};
-
-(async () => {
-  const numberOfPokemon = await importPropertyFromPokeApi("pokemon", "count");
-  const informationAboutPokemons = [];
-  const details = await importFromPokeApi(`pokemon/1`);
-  informationAboutPokemons.push(details);
-  console.log(numberOfPokemon);
-  console.log(informationAboutPokemons[0]);
+// eslint-disable-next-line no-unused-vars
+const createPokemonList = (async () => {
+  const pokemonList = await importPropertyFromPokeApi(
+    `pokemon/?limit=30&offset`,
+    `results`
+  );
+  pokemonList.forEach((pokemon) => {
+    (async () => {
+      // eslint-disable-next-line no-unused-vars
+      const pokemonDetails = await importFromUrl(pokemon.url);
+    })();
+  });
 })();

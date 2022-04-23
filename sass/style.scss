@@ -1,6 +1,13 @@
-header {
-  > img {
-    width: 50%;
-    align-items: center;
+body {
+  .container {
+    width: 100vw;
+    header {
+      width: 100%;
+      align-items: center;
+      img {
+        width: 50%;
+        align-items: center;
+      }
+    }
   }
 }
