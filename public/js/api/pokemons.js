@@ -14,7 +14,12 @@ const importPropertyFromPokeApi = async (
   return dataToBeArranged[propertyToBeImported];
 };
 
-// eslint-disable-next-line no-unused-vars
+const importFromPokeApi = async (sectionToBeImported) => {
+  const response = await fetch(`${mainApiUrl}${sectionToBeImported}`);
+  const dataToBeArranged = await response.json();
+  return dataToBeArranged;
+};
+
 const createPokemonList = (async () => {
   const pokemonList = await importPropertyFromPokeApi(
     `pokemon/?limit=30&offset`,
@@ -22,7 +27,6 @@ const createPokemonList = (async () => {
   );
   pokemonList.forEach((pokemon) => {
     (async () => {
-      // eslint-disable-next-line no-unused-vars
       const pokemonDetails = await importFromUrl(pokemon.url);
     })();
   });
