@@ -1,3 +1,5 @@
+import CardComponent from "../components/CardComponent.js";
+
 const mainApiUrl = "https://pokeapi.co/api/v2/";
 const importFromUrl = async (url) => {
   const response = await fetch(url);
@@ -14,12 +16,6 @@ const importPropertyFromPokeApi = async (
   return dataToBeArranged[propertyToBeImported];
 };
 
-const importFromPokeApi = async (sectionToBeImported) => {
-  const response = await fetch(`${mainApiUrl}${sectionToBeImported}`);
-  const dataToBeArranged = await response.json();
-  return dataToBeArranged;
-};
-
 const createPokemonList = (async () => {
   const pokemonList = await importPropertyFromPokeApi(
     `pokemon/?limit=30&offset`,
@@ -28,6 +24,13 @@ const createPokemonList = (async () => {
   pokemonList.forEach((pokemon) => {
     (async () => {
       const pokemonDetails = await importFromUrl(pokemon.url);
+      // eslint-disable-next-line no-unused-vars
+      const card = new CardComponent(
+        document.querySelector("ul.pokemon-list"),
+        pokemonDetails
+      );
     })();
   });
 })();
+
+export default createPokemonList;
