@@ -1,6 +1,8 @@
 import Component from "./Component.js";
 
 class CardComponent extends Component {
+  pokemon;
+
   constructor(
     parentElement,
     {
@@ -25,7 +27,8 @@ class CardComponent extends Component {
   }
 
   render() {
-    this.element.innerHTML = `          <h3>${this.name}</h3>
+    this.element.innerHTML = `          <h3>${this.name}</h3>  
+          <i class="fa-solid fa-circle-plus id-${this.id}"></i>
           <img
             src="${this.image}"
             alt="${this.name}"
