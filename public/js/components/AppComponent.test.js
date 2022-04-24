@@ -1,6 +1,7 @@
 import CardComponent from "./CardComponent";
 
 describe("Given a CardComponent component", () => {
+  // eslint-disable-next-line no-unused-vars
   let container;
   beforeEach(() => {});
 
