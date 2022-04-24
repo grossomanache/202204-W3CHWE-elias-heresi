@@ -20,7 +20,7 @@ class AppComponent extends Component {
         <section class="page-scroller__upper">
         </section>
         <div class="container px-4">
-          <ul class="pokemon-list row list-unstyled gx-5"></ul>
+          <ul class="pokemon-list row list-unstyled d-flex justify-content-center"></ul>
         </div>
         <section class="page-scroller__lower">
         </section>
