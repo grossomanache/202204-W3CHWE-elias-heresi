@@ -16,7 +16,11 @@ class AppComponent extends Component {
       </ul>
     </header>
       <main class="basic-container">
+        <section class="page-scroller__lower">
+        </section>
         <ul class="pokemon-list"></ul>
+        <section class="page-scroller__upper">
+        </section>
       </main>
       <footer></footer>`;
   }

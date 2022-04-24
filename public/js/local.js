@@ -1,2 +1,2 @@
 import "./components/AppComponent.js";
-import "./api/localPokemons.js";
+import "./renderization/localPokemons.js";

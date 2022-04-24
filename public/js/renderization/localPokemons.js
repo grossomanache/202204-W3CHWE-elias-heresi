@@ -1,12 +1,7 @@
 import CardComponent from "../components/CardComponent.js";
+import { importFromUrl } from "../api/pokeapi.js";
 
 const localUrl = "http://localhost:4000/pokemon";
-
-const importFromUrl = async (url) => {
-  const response = await fetch(url);
-  const dataToBeArranged = await response.json();
-  return dataToBeArranged;
-};
 
 const localPokemons = (async () => {
   const pokemonList = await importFromUrl(localUrl);
