@@ -2,3 +2,4 @@ node_modules
 css
 public/js/api/pokemons.js
 public/js/pokemons/bulbasaur.js
+public/js/components/AppComponent.test.js

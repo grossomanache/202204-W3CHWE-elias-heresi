@@ -10,7 +10,7 @@ class AppComponent extends Component {
 
   render() {
     this.element.innerHTML = `<header>
-      <ul>
+      <ul class="list-unstyled">
         <a href="index.html">Main page</a>
         <a href="local.html">My pokemon</a>
       </ul>
@@ -18,7 +18,9 @@ class AppComponent extends Component {
       <main class="basic-container">
         <section class="page-scroller__lower">
         </section>
-        <ul class="pokemon-list"></ul>
+        <div class="container px-4">
+          <ul class="pokemon-list row list-unstyled gx-5"></ul>
+        </div>
         <section class="page-scroller__upper">
         </section>
       </main>

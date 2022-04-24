@@ -1,10 +1,18 @@
 body {
   font-family: "Roboto", sans-serif;
-  background-color: pink;
+  background-image: url("../img/background2.jpg");
+  background-color: rgb(149, 107, 114);
   .general-container {
     width: 100vw;
     ul {
       li {
+        background-color: pink;
+        border: 2px;
+        border-style: solid;
+        border-color: black;
+        img {
+          width: 100%;
+        }
         h3 {
           text-transform: capitalize;
         }
