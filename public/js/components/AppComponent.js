@@ -10,10 +10,11 @@ class AppComponent extends Component {
 
   render() {
     this.element.innerHTML = `<header>
-      <ul class="list-unstyled">
+      <ul class="list-unstyled link-unstyled">
         <a href="index.html">Main page</a>
         <a href="local.html">My pokemon</a>
       </ul>
+      <img src="img/pokemon.png" alt="Pokemon logo">
     </header>
       <main class="basic-container">
         <section class="page-scroller__upper">
