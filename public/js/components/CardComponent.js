@@ -18,7 +18,7 @@ class CardComponent extends Component {
       },
     }
   ) {
-    super(parentElement, "li", `pokemon-card`);
+    super(parentElement, "li", `pokemon-card col-3 p-3`);
     this.name = name;
     this.id = id;
     this.image = image;
@@ -43,8 +43,8 @@ class CardComponent extends Component {
   addListeners() {
     this.element.querySelector("i").addEventListener("click", () => {
       (async () => {
-        const nuevoPoke = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
-        addToLocalApi(nuevoPoke);
+        const addedPokemon = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
+        addToLocalApi(addedPokemon);
       })();
     });
   }
