@@ -12,7 +12,7 @@ const localPokemons = (async () => {
   const pokemonList = await importFromUrl(localUrl);
   pokemonList.forEach((pokemon) => {
     (async () => {
-      const pokemonDetails = await importFromUrl(pokemon);
+      const pokemonDetails = await importFromUrl(pokemon.id);
       // eslint-disable-next-line no-unused-vars
       const card = new CardComponent(
         document.querySelector("ul.pokemon-list"),

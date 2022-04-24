@@ -1,4 +1,5 @@
 import Component from "./Component.js";
+import addToLocalApi from "../api/modifyLocal.js";
 
 class CardComponent extends Component {
   pokemon;
@@ -24,6 +25,7 @@ class CardComponent extends Component {
     this.height = height / 10;
     this.weight = weight / 10;
     this.render();
+    this.addListeners();
   }
 
   render() {
@@ -36,6 +38,15 @@ class CardComponent extends Component {
           <p>ID: #${this.id}</p>
           <h4>Height: ${this.height}m</h4>
           <h4>Weight: ${this.weight}kg</h4>`;
+  }
+
+  addListeners() {
+    this.element.querySelector("i").addEventListener("click", () => {
+      (async () => {
+        const nuevoPoke = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
+        addToLocalApi(nuevoPoke);
+      })();
+    });
   }
 }
 

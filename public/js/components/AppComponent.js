@@ -11,8 +11,8 @@ class AppComponent extends Component {
   render() {
     this.element.innerHTML = `<header>
       <ul>
-        <li>Main page</li>
-        <li>My Pokemon</li>
+        <a href="index.html">Main page</a>
+        <a href="local.html">My pokemon</a>
       </ul>
     </header>
       <main class="basic-container">
