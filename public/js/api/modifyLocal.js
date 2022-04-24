@@ -1,4 +1,5 @@
-const localUrl = "http://localhost:4000/pokemon";
+// const localUrl = "http://localhost:4000/pokemon";
+const localUrl = "https://pokemon-local-repository.herokuapp.com/pokemon";
 const addToLocalApi = async (url) => {
   const response = await fetch(localUrl, {
     method: "POST",

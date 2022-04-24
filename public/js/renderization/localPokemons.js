@@ -1,7 +1,7 @@
 import CardComponent from "../components/CardComponent.js";
 import { importFromUrl } from "../api/pokeapi.js";
 
-const localUrl = "http://localhost:4000/pokemon";
+const localUrl = "https://pokemon-local-repository.herokuapp.com/pokemon";
 
 const localPokemons = (async () => {
   const pokemonList = await importFromUrl(localUrl);
