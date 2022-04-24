@@ -1,12 +1,32 @@
+header {
+  ul {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    font-size: 30px;
+
+    a {
+      color: white;
+    }
+  }
+  img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url("../img/background2.jpg");
+  background: url("../img/clouds-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: rgb(149, 107, 114);
   .general-container {
     width: 100vw;
     ul {
       li {
-        background-color: pink;
+        background-color: rgb(198, 176, 187);
         border: 2px;
         border-style: solid;
         border-color: black;
